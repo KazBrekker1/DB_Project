@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="lib">
+    <CLASSES>
+      <root url="file://$jfx_11$" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$jfx_11$" />
+    </SOURCES>
+    <jarDirectory url="file://$jfx_11$" recursive="false" />
+    <jarDirectory url="file://$jfx_11$" recursive="false" type="SOURCES" />
+  </library>
+</component>
