@@ -4,14 +4,10 @@ import BackEnd.Fetcher;
 import MainSystem.MainApp;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.*;
 import javafx.scene.paint.Color;
 import javafx.stage.Stage;
 
-import java.io.IOException;
 
 public class LoginController {
 
@@ -51,12 +47,11 @@ public class LoginController {
                 MainApp mainApp = new MainApp();
                 mainApp.start(stage2);
 
-                //============//
                 Alert alert = new Alert(Alert.AlertType.INFORMATION);
                 alert.setTitle("User Info");
                 alert.setHeaderText(null);
                 alert.setContentText(String.format("Employee Name: %s, Username: %s, Password: %s", Fetcher.getEmpName(),
-                        Fetcher.getUserName(), Fetcher.getUserName()));
+                        Fetcher.getUserName(), Fetcher.getPassword()));
                 alert.showAndWait();
             } else {
                 statusLBL.setText("Wrong Info");
