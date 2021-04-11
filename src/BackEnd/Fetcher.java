@@ -43,6 +43,7 @@ public class Fetcher {
         try {
             conn = DriverManager.getConnection("jdbc:oracle:thin:@coestudb.qu.edu.qa:1521/STUD.qu.edu.qa"
                     , "ye1800846", "ye1800846");
+            conn.setAutoCommit(false);
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(String.format("insert into prj_emp values (default, '%s', %d, '%s', '%s', '%s', %d, %f, '%s', '%s')", eName, phone, hireDate, dob, gender, salary, commission, dept, position));
             conn.close();
@@ -58,6 +59,7 @@ public class Fetcher {
         try {
             conn = DriverManager.getConnection("jdbc:oracle:thin:@coestudb.qu.edu.qa:1521/STUD.qu.edu.qa"
                     , "ye1800846", "ye1800846");
+            conn.setAutoCommit(false);
             Statement stmt = conn.createStatement();
             stmt.executeUpdate(String.format("update prj_emp set salary = %d where id = %s", salary, EID));
             conn.close();
@@ -73,6 +75,7 @@ public class Fetcher {
         try {
             conn = DriverManager.getConnection("jdbc:oracle:thin:@coestudb.qu.edu.qa:1521/STUD.qu.edu.qa"
                     , "ye1800846", "ye1800846");
+            conn.setAutoCommit(false);
             Statement stmt = conn.createStatement();
 //            green
             stmt.executeUpdate(String.format("delete from prj_emp where ID = %d", Enumber));
